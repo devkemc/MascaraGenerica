@@ -26,7 +26,7 @@ const inputs = document.querySelectorAll('[mask]')
 inputs.forEach((input) => {
     input.addEventListener("input", addMask);
 })
-function addMask(input) {
+const addMask = (input) => {
     const mask = input.target.attributes.mask.value
     const maxLength = input.target.maxLength;
     const {searchValue, replaceValue} = createRegex(mask)
